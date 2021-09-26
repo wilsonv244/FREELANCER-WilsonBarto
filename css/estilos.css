@@ -8,24 +8,41 @@ html{
     font-family: 'Inter', sans-serif;
     font-weight: 100;
 }
+.texto{
+    text-align: center;
+}
 .contenedor{
     max-width: 90rem;
     margin: 0 auto;
+}
+/*UTILIDADES*/
+.boton{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(22, 157, 157);
+    font-weight: 400;
+    padding: 1rem;
+    border-radius: 2rem;
 }
 /*CABEZEERA*/
 .cabeza{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 1.5rem;
+    justify-items: center;
     background-color: teal;
+    cursor: pointer;
 }
 .cabeza h2{
     color: white;
-    justify-self: center;
 }
-.cabeza h2:hover{
-    pointer-events: painted;
+.cabeza div:hover{
+    pointer-events: stroke;
+    padding: 0 2rem 0 2rem;
     background-color: #D4AC0D;
+}
+.cabeza a{
+    text-decoration: none;
 }
 .contenedor{
     margin: 0 auto;
@@ -41,18 +58,26 @@ html{
     background-size: cover;
 }
 .contenido-principal{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-top: 5rem;
+    color: white;
 }
 .pantallaNegra{
+    width: 100%;
+    height: 100%;
     position: absolute;
     background-color: rgb(0, 0, 0);
+    opacity: 0.6;
     height: 30rem;
     z-index: 1;
 }
-.contenido-principal h1, h2, p{
-    justify-self: center;
+.contenido-principal h2,h1, a, p{
+    z-index: 2;
+    text-align: center;
 }
+
 .contenido-principal .fas{
     color:  #D4AC0D ;
     margin-right: .5rem;
@@ -63,14 +88,16 @@ html{
     margin-top: 2rem;
     padding: 2rem;
     background-color: whitesmoke;
+    border-radius: 5rem;
+    box-shadow: turquoise;
 }
 .fondo h1{
     text-align: center;
 }
 .servicios{
+    display: flex;
     justify-content: center;
     align-items: baseline;
-    display: flex;
 }
 .contenido-central{
     display: flex;
@@ -83,6 +110,10 @@ html{
     line-height: 1.5rem;
     font-weight: 300;
 }
+.contenido-central h2{
+    text-align: center;
+    margin-bottom: 2rem;
+}
 .contenido-central i{
     padding: 2.8rem;
     font-size: 2.3rem;
@@ -91,3 +122,115 @@ html{
     color: black;
 }
 /*CONTACTOS*/
+.contacto{
+    max-width: min(40rem, 100%);
+    margin: 0 auto;
+    background-color: gray;
+    padding: 3rem;
+    border-radius: 2rem;
+}
+.nombre{
+    display: flex;  
+    margin-bottom: 1.5rem;
+    align-items: baseline;
+}
+.contenedor1 input, textarea{
+    margin: 0 .6rem 0 .6rem;
+    width: 100%;
+    border: none;
+    border-radius: .6rem;
+    border-color: white;
+    padding: .5rem;
+}
+.contenedor1 h3{
+    color: rgba(240, 243, 83, 0.843);
+    text-align: center;
+    font-weight: 800;
+}
+.contenedor1 label{
+    min-width: 6rem;
+    color: white;
+    font-weight: 600;
+}
+.datos{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    align-items: baseline;
+}
+.columnas2{
+    display: flex;
+}
+
+/* .datos .correo{
+    margin-right: 0.7rem;
+} */
+.abajo p{
+    text-align: center;
+    font-weight: 200;
+}
+.enviar{
+    display: flex;
+    justify-content: flex-end;
+}
+.abajo span{
+    font-weight: 600;
+}
+/*MODO RESPONSIVE*/
+@media screen and (max-width:770px) {
+    html{
+        font-size: 15px;
+    }
+    .contenedor1 label{
+        width: 7rem;
+    }
+    /*Cabezera*/
+    .cabeza{
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .contenedor1{
+        max-width: 40rem;
+    }
+    .contacto{
+        width: min(25rem, 100%);
+    }
+    .nombre{
+        display: flex;
+        flex-direction: column;
+    }
+    .formulario{
+        display: block;
+    }
+    .columnas2{
+        display: block;
+    }
+    .enviar{
+        display: flex;
+        min-width: 10rem;
+        justify-content: center;
+    }
+    
+}
+@media screen and (max-width:550px){
+    .contacto{
+        width: min(23rem, 100%);
+    }
+    .servicios{
+        display: block;
+    }
+    .boton{
+        width: 90%;
+    }
+    .enviar{
+        
+        display: flex;
+        justify-content: center;
+    }
+    .cabeza div:hover{
+        cursor: pointer;
+        pointer-events: stroke;
+        padding: 0 100%;
+        background-color: #D4AC0D;
+    }
+}
