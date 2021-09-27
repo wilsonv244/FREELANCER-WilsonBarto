@@ -212,6 +212,20 @@ html{
     }
     
 }
+.abajo{
+    padding-top: 1.5rem;
+    background-color: gainsboro;
+    height: 4rem;
+}
+.abajo p{
+    padding-bottom: 1.5rem;
+}
+.abajo a{
+    font-size: 1.5rem;
+    margin-left: .5rem;
+    text-decoration: none;
+    color: black;
+}
 @media screen and (max-width:550px){
     .contacto{
         width: min(23rem, 100%);
