@@ -35,6 +35,9 @@ html{
     justify-items: center;
     background-color: teal;
     cursor: pointer;
+    /* max-height: 100vh;
+    position: fixed; */
+    z-index: 3;
 }
 .cabeza h2{
     color: white;
@@ -250,4 +253,27 @@ html{
         padding: 0 100%;
         background-color: #D4AC0D;
     }
+}
+/* Mensjae de error */
+/* .errorform{
+    display: flex;
+} */
+.errorform{
+    font-weight: 600;
+    background-color: rgb(214, 23, 23);
+    margin-top: 1.5rem;
+    text-align: center;
+    color: white;
+    border-radius: 2rem;
+    padding: 1.2rem;
+}
+.right{
+    font-weight: 600;
+    background-color: rgb(40, 58, 144);
+    margin-top: 1.5rem;
+    text-align: center;
+    color: white;
+    border-radius: 2rem;
+    padding: 1.2rem;
+    
 }

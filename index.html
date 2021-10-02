@@ -35,7 +35,7 @@
         </div>
         <div class="contenido-principal contenedor">
             <h1>Diseño y Desarrollo Web Freelancer</h1>
-            <p><i class="fas fa-map-marker-alt"></i>Juliaca, Puno</p>
+            <p><i class="fas fa-map-marker-alt" id="mapa"></i>Juliaca, Puno</p>
             <a href="#" class="boton">CONTACTAR</a>
         </div>
     </div>
@@ -63,7 +63,10 @@
             <div class="contacto">
                 <div class="contenedor1">
                     <h3>CONTACTANOS LLENANDO TODOS LOS CAMPOS</h3>
-                    <form action="POST" class="formulario">
+                    <!-- <div class="errorform">
+                        <h3>Llene todos los campos</h3>
+                    </div> -->
+                    <form  class="formulario">
                         <div class="columnas2">
                             <div class="datos">
                                 <label for="nombre">Nombre</label>
@@ -71,19 +74,19 @@
                             </div>
                             <div class="datos">
                                 <label for="telefono">Telefono</label>
-                                <input type="number" name="telefono">
+                                <input type="number" name="telefono" id="telefono">
                             </div>
                         </div>
                         <div class="datos">
-                            <label for="correo" class="correo">Correo</label>
-                            <input type="email"> 
+                            <label for="correo" class="correo"">Correo</label>
+                            <input type="email"  id="correo"> 
                         </div>
                         <div class="datos">
                             <label for="Mensaje">Mensaje</label>
-                            <textarea name="Mensaje" id="Mensaje" cols="20" rows="5"></textarea>
+                            <textarea name="Mensaje" id="mensaje" cols="20" rows="5"></textarea>
                         </div>
                         <div class="enviar">
-                            <a href="#" class="boton">enviar</a>
+                            <input type="submit" value="enviar" href="#" class="boton" id="boton"></input>
 
                         </div>
                     </form>
@@ -98,6 +101,6 @@
             <span>Elaborado por Wilson @Barto</span> <a href="#" class="fab fa-facebook"></a><a href="#" class="fab fa-instagram"></a></p>
         </div>
     </footer>
-    
+    <script src="js/eventos.js"></script>
 </body>
 </html>
